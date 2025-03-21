@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./simple_api
+    image: student_api
+    container_name: api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./simple_api/student_age.json:/data/student_age.json
+    restart: always
+
+  website:
+    image: php:apache
+    container_name: php_website
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website:/var/www/html
+    environment:
+      USERNAME: "root"
+      PASSWORD: "root"
+    depends_on:
+      - api
+    restart: always
