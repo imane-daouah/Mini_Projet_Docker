@@ -50,12 +50,13 @@ Affichage du code docker-compose.yml montrant la configuration du service api.
 🎯 Objectif :
 Nous avons lancé l’application en une seule commande :
 docker-compose up --build -d
-![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/07629c4b-7802-4903-81af-edd2b1de2f58)
-![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/de4bfb06-8edf-43ea-95aa-6c77ec072b23)
-![Capture d'écran 2025-03-21 120846](https://github.com/user-attachments/assets/707ec1c4-aac4-4d3a-9201-38e29667efec)
-![Capture d'écran 2025-03-21 121055](https://github.com/user-attachments/assets/5dd86317-a202-41fb-a401-e7ebfc2f308f)
-![Capture d'écran 2025-03-21 121122](https://github.com/user-attachments/assets/4b93db8d-bace-4df7-8a5e-4eb24d0dd737)
-![Capture d'écran 2025-03-21 121122](https://github.com/user-attachments/assets/3b17be75-e36c-4528-b6d9-f3c4e0acd4e4)
+![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/f76195b1-e7b1-4866-98bb-ea6139![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/9969750b-6196-4b75-b9fe-864819cacdca)
+824bf8)
+![Capture d'écran 2025-03-21 120846](https://github.com/user-attachments/assets/1a274f91-07ee-4d5d-8a80-9a5e146b4112)
+![Capture d'écran 2025-03-21 120930](https://github.com/user-attachments/assets/1bcb483b-71e0-4a28-b63e-656d3852e5a6)
+![Capture d'écran 2025-03-21 121055](https://github.com/user-attachments/assets/94fdfcbc-fdd7-4536-a2a4-604ae8905533)
+
+![Capture d'écran 2025-03-21 121122](https://github.com/user-attachments/assets/5e6356a9-16f3-495e-876f-304044a00af8)
 
 
 ✅ 6. Tester l’application
