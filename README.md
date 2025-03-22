@@ -42,13 +42,17 @@ docker run -d -p 5000:5000 -v $(pwd)/simple_api/student_age.json:/data/student_a
 
 ## 🏗️ **2. Mise en place du site web PHP**  
 ### 📌 **Étapes réalisées :**  
-- Création du fichier `index.php` contenant l’interface utilisateur.  
-- Connexion du site web à l'API Flask pour récupérer les données.  
-- Ajout des variables d’environnement pour sécuriser la connexion.  
+![image](https://github.com/user-attachments/assets/4ef13e30-7b01-4514-8f84-bc98383d5ad9)
 
-📸 **Capture d'écran :** Interface web avant intégration Docker.  
+![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/0421c319-6af1-42b7-a068-5b338c6e1184)
 
----
+![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/4c7fd7fb-f93b-4197-8676-fac5e1fa7ef1)
+
+![Capture d'écran 2025-03-21 120846](https://github.com/user-attachments/assets/1c8af17b-b56c-4e48-b3ef-5e98022e7fa4)
+
+![Capture d'écran 2025-03-21 120930](https://github.com/user-attachments/assets/2f15d6f0-b68b-45b0-96b5-996390ebed53)
+![Capture d'écran 2025-03-21 121017](https://github.com/user-attachments/assets/1383f0a5-fb84-4644-9798-6e07900391e1)
+![Capture d'écran 2025-03-21 122159](https://github.com/user-attachments/assets/314c5ca8-ea9d-4550-82d2-033d1d078976)
 
 ## 🐳 **3. Orchestration avec Docker Compose**  
 ### 📌 **Objectif :**  
@@ -62,9 +66,19 @@ docker-compose up --build -d
 # Vérifier les conteneurs en cours d'exécution
 docker ps
 ```
-📸 **Capture d'écran :** Exécution de `docker-compose up` et vérification des conteneurs actifs.  
+![Uploading image.png…]()
 
----
+![Capture d'écran 2025-03-21 124731](https://github.com/user-attachments/assets/3865b1a9-70f1-478f-a33e-88a6168a2289)
+![Capture d'écran 2025-03-21 120930](https://github.com/user-attachments/assets/8b274a70-f48b-412f-a959-36f8eb48ad27)
+![Capture d'écran 2025-03-21 121055](https://github.com/user-attachments/assets/05784faa-ad6f-4079-b075-80d05e05627c)
+![Capture d'écran 2025-03-21 121122](https://github.com/user-attachments/assets/ca8989cb-a8d4-4787-984d-5c8623f328c1)
+
+
+
+![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/bf9f8500-0bae-466d-bcbe-0aa8ac183b3f)
+
+![Capture d'écran 2025-03-21 125255](https://github.com/user-attachments/assets/37cfb358-2e23-42a2-9104-893f7bfc9163)
+
 
 ## 📦 **4. Déploiement du Docker Registry (Bonus)**  
 ### 📌 **Objectif :**  
@@ -84,8 +98,6 @@ curl http://localhost:5001/v2/_catalog
 ```
 📸 **Capture d'écran :** Affichage du registre Docker avec les images stockées.  
 
----
-
 ## ✅ **5. Tests finaux et validation**  
 - 📌 **Tester l'API dans le navigateur :** `http://localhost:5000/supmit/api/v1.0/get_student_ages`  
 - 📌 **Accéder au site web :** `http://localhost:8080`  
@@ -93,30 +105,10 @@ curl http://localhost:5001/v2/_catalog
 
 ---
 
-## 🚀 **6. Conclusion et améliorations possibles**  
-📌 **Améliorations possibles :**  
-- 🔐 **Sécuriser l’API avec JWT** plutôt qu’une authentification basique.  
-- 🗄️ **Utiliser une base de données (MySQL/PostgreSQL)** au lieu du fichier JSON.  
-- 🌍 **Déployer sur un serveur Cloud (AWS, GCP, Azure).**  
 
----
 
-## 🔗 **7. Lien du Dépôt GitHub/GitLab**  
-📌 **Lien vers le projet :** [Ajoute ici ton lien GitHub/GitLab]  
 
----
-
-## 🎯 **8. Fichiers fournis dans ce dépôt**  
-✅ `Dockerfile` (API Flask)  
-✅ `docker-compose.yml`  
-✅ `student_age.py` (API Python)  
-✅ `index.php` (Frontend PHP)  
-✅ `README.md` (Documentation complète)  
-
----
 
 **👨‍💻 Réalisé par :**  
-🔹 **Nom :** Imane Daouah, Isamil Damouh, Imane Bouhabba  
-🔹 **Email :** imane.daouah@gmail.com  
-🔹 **Date :** [Ajoute la date]
+**Nom :** Imane Daouah, Isamil Damouh, Imane Bouhabba  
 
