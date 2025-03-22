@@ -66,18 +66,6 @@ docker-compose up --build -d
 # Vérifier les conteneurs en cours d'exécution
 docker ps
 ```
-![Uploading image.png…]()
-
-![Capture d'écran 2025-03-21 124731](https://github.com/user-attachments/assets/3865b1a9-70f1-478f-a33e-88a6168a2289)
-![Capture d'écran 2025-03-21 120930](https://github.com/user-attachments/assets/8b274a70-f48b-412f-a959-36f8eb48ad27)
-![Capture d'écran 2025-03-21 121055](https://github.com/user-attachments/assets/05784faa-ad6f-4079-b075-80d05e05627c)
-![Capture d'écran 2025-03-21 121122](https://github.com/user-attachments/assets/ca8989cb-a8d4-4787-984d-5c8623f328c1)
-
-
-
-![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/bf9f8500-0bae-466d-bcbe-0aa8ac183b3f)
-
-![Capture d'écran 2025-03-21 125255](https://github.com/user-attachments/assets/37cfb358-2e23-42a2-9104-893f7bfc9163)
 
 
 ## 📦 **4. Déploiement du Docker Registry (Bonus)**  
@@ -96,14 +84,6 @@ docker push localhost:5001/student_api
 # Vérifier les images dans le registre
 curl http://localhost:5001/v2/_catalog
 ```
-📸 **Capture d'écran :** Affichage du registre Docker avec les images stockées.  
-
-## ✅ **5. Tests finaux et validation**  
-- 📌 **Tester l'API dans le navigateur :** `http://localhost:5000/supmit/api/v1.0/get_student_ages`  
-- 📌 **Accéder au site web :** `http://localhost:8080`  
-📸 **Capture d'écran :** Liste des étudiants affichée sur le site web.  
-
----
 
 
 
