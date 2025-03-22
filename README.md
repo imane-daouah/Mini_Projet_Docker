@@ -110,6 +110,8 @@ Nous avons lancé une interface web pour gérer les images Docker avec :
 ![Capture d'écran 2025-03-21 125255](https://github.com/user-attachments/assets/4369e600-db46-41cf-9096-367b552f4a74)
 ![image](https://github.com/user-attachments/assets/aa960892-6021-4669-af92-71dce1a8fcf1)
 
+![{7D96C7A1-9DC1-4915-B90A-0C2FF5489A54}](https://github.com/user-attachments/assets/f6a4cad5-ab8a-453f-b6de-5c45de48131b)
+
 
 
 
