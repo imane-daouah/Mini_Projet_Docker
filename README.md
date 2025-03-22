@@ -56,9 +56,10 @@ Affichage du code docker-compose.yml montrant la configuration du service api.
 
 Nous avons lancé l’application en une seule commande :
 docker-compose up --build -d
+![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/c7fc58ca-4485-418a-b3c1-71f7d48ea0e2)
+![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/9b75725f-2437-49cf-9518-95d124344e8c)
 
-![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/f76195b1-e7b1-4866-98bb-ea6139![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/9969750b-6196-4b75-b9fe-864819cacdca)
-824bf8)
+
 ![Capture d'écran 2025-03-21 120846](https://github.com/user-attachments/assets/1a274f91-07ee-4d5d-8a80-9a5e146b4112)
 ![Capture d'écran 2025-03-21 120930](https://github.com/user-attachments/assets/1bcb483b-71e0-4a28-b63e-656d3852e5a6)
 ![Capture d'écran 2025-03-21 121055](https://github.com/user-attachments/assets/94fdfcbc-fdd7-4536-a2a4-604ae8905533)
