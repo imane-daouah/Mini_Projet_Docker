@@ -27,6 +27,7 @@ docker run -d -p 5000:5000 -v $(pwd)/student_age.json:/data/student_age.json --n
 
 
 _ Test final avec curl
+
 🎯 Objectif :
 Nous avons testé l’API en appelant :
 curl -u root:root -X GET http://localhost:5000/supmit/api/v1.0/get_student_ages
@@ -37,6 +38,7 @@ curl -u root:root -X GET http://localhost:5000/supmit/api/v1.0/get_student_ages
 Dans cette étape, nous allons automatiser le déploiement de l’API et du site web PHP en utilisant Docker Compose. 🚀
 
 ✅ 1. Création du fichier docker-compose.yml
+
 🎯 Objectif :
 Nous avons créé le fichier docker-compose.yml qui définit les services API et Website.
 
@@ -44,6 +46,7 @@ Nous avons créé le fichier docker-compose.yml qui définit les services API et
 
 Affichage du code docker-compose.yml montrant la configuration du service api.
 ✅ 5. Lancer Docker Compose
+
 🎯 Objectif :
 Nous avons lancé l’application en une seule commande :
 docker-compose up --build -d
@@ -58,6 +61,7 @@ docker-compose up --build -d
 
 
 ✅ 6. Tester l’application
+
 🎯 Objectif :
 Nous avons accédé au site web via http://localhost:8080 et cliqué sur "List Student" pour vérifier que l’API fonctionne.
 ![Capture d'écran 2025-03-21 122255](https://github.com/user-attachments/assets/77860423-9e82-40d0-a54e-e962394b0cc3)
@@ -69,6 +73,7 @@ Affichage du site web avec la liste des étudiants.
 Dans cette étape, nous allons créer un registre privé Docker pour stocker les images localement et les gérer via une interface web. 🚀
 
 _ Lancer le registre privé Docker
+
 🎯 Objectif :
 Nous avons démarré un registre privé local pour stocker nos images Docker.
 docker run -d -p 5001:5000 --name registry registry:2
@@ -78,7 +83,8 @@ docker run -d -p 5001:5000 --name registry registry:2
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/724bd8b7-df6d-46d4-baef-d14105f932d3)
 
 
-_ Vérifier le registre privé
+_ Vérifier le registre privé 
+
 🎯 Objectif :
 Nous avons vérifié si le registre privé fonctionne bien avec :
 _ Tagger l’image et l’envoyer au registre privé
@@ -86,6 +92,7 @@ docker push localhost:5001/student_api
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/21af6588-82f5-4a96-970e-68e987fa0506)
 
 _ Déployer une interface Web pour voir le registre
+
 🎯 Objectif :
 Nous avons lancé une interface web pour gérer les images Docker avec :
 
