@@ -68,5 +68,37 @@ Nous avons accédé au site web via http://localhost:8080 et cliqué sur "List S
 
 Affichage du site web avec la liste des étudiants.
 
+📌Étape III : Déploiement du Docker Registry (4 points)
+Dans cette étape, nous allons créer un registre privé Docker pour stocker les images localement et les gérer via une interface web. 🚀
+
+✅ 1. Lancer le registre privé Docker
+🎯 Objectif :
+Nous avons démarré un registre privé local pour stocker nos images Docker.
+docker run -d -p 5001:5000 --name registry registry:2
+![image](https://github.com/user-attachments/assets/a056bce5-f84d-448a-b17c-3b722c4245e6)
+![Capture d'écran 2025-03-21 124731](https://github.com/user-attachments/assets/5d60e269-08a5-4fea-a588-3ca755bd3b5b)
+![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/724bd8b7-df6d-46d4-baef-d14105f932d3)
+
+
+✅ 2. Vérifier le registre privé
+🎯 Objectif :
+Nous avons vérifié si le registre privé fonctionne bien avec :
+curl http://localhost:5001/v2/_catalog
+📸 Capture d’écran à ajouter :
+
+Résultat de curl montrant que le registre est actif (il affichera { "repositories": [] } si vide).
+✅ 3. Tagger l’image et l’envoyer au registre privé
+docker push localhost:5001/student_api
+
+![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/21af6588-82f5-4a96-970e-68e987fa0506)
+
+docker push localhost:5001/student_api
+
+✅ 4. Déployer une interface Web pour voir le registre
+🎯 Objectif :
+Nous avons lancé une interface web pour gérer les images Docker avec :
+
+![Capture d'écran 2025-03-21 125255](https://github.com/user-attachments/assets/4369e600-db46-41cf-9096-367b552f4a74)
+
 
 
