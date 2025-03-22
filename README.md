@@ -31,12 +31,15 @@ docker build -t student_api ./simple_api
 # Exécution du conteneur Flask
 docker run -d -p 5000:5000 -v $(pwd)/simple_api/student_age.json:/data/student_age.json --name api student_api
 
-# Vérification des logs
-docker logs api
-```
-📸 **Capture d'écran :** Lancement et test du conteneur API avec `curl`.  
+![Capture d'écran 2025-03-21 112826](https://github.com/user-attachments/assets/ecd8799c-4f00-4a83-966c-2039e4f3a8cf)
 
----
+![Capture d'écran 2025-03-21 113010](https://github.com/user-attachments/assets/974f8437-f751-4138-97af-5a4b85613a10)
+
+![Capture d'écran 2025-03-21 113448](https://github.com/user-attachments/assets/3744dd16-015b-404a-94c5-6271f7aaea4f)
+![Capture d'écran 2025-03-21 114731](https://github.com/user-attachments/assets/295d989e-0606-4d8e-84e4-4fe983230082)
+
+
+
 
 ## 🏗️ **2. Mise en place du site web PHP**  
 ### 📌 **Étapes réalisées :**  
