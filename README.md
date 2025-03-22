@@ -24,7 +24,6 @@ L'objectif est de **déployer l'application avec Docker**, en utilisant **Docker
 ![image](https://github.com/user-attachments/assets/90f4cc1e-e8e1-4639-a70e-f5116d15d400)
 
 ### 🛠️ **Commandes utilisées :**  
-```sh
 # Construction de l'image API
 docker build -t student_api ./simple_api
 
