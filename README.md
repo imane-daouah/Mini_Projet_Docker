@@ -94,8 +94,6 @@ docker run -d -p 5001:5000 --name registry registry:2
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/724bd8b7-df6d-46d4-baef-d14105f932d3)
 
 
-_ Vérifier le registre privé 
-
 ✅ Objectif :
 
 Nous avons vérifié si le registre privé fonctionne bien avec :
@@ -104,7 +102,6 @@ docker push localhost:5001/student_api
 
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/21af6588-82f5-4a96-970e-68e987fa0506)
 
-_ Déployer une interface Web pour voir le registre
 
 ✅ Objectif :
 
