@@ -24,8 +24,10 @@ Nous avons construit l’image avec la commande :
 docker build -t student_api .
 
 ![Capture d'écran 2025-03-21 112826](https://github.com/user-attachments/assets/52e33dca-809c-4e20-be69-97d81463ddf1)
+
 Puis, nous avons lancé un conteneur avec :
 docker run -d -p 5000:5000 -v $(pwd)/student_age.json:/data/student_age.json --name api student_api
+
 ![Capture d'écran 2025-03-21 113448](https://github.com/user-attachments/assets/b0824b76-d22b-425e-8704-30673f9f67a6)
 ![Capture d'écran 2025-03-21 113833](https://github.com/user-attachments/assets/c92c3a03-5922-4da6-8575-c6253cb06e0f)
 
@@ -33,6 +35,7 @@ docker run -d -p 5000:5000 -v $(pwd)/student_age.json:/data/student_age.json --n
 ✅ Objectif :
 Nous avons testé l’API en appelant :
 curl -u root:root -X GET http://localhost:5000/supmit/api/v1.0/get_student_ages
+
 ![Capture d'écran 2025-03-21 114613](https://github.com/user-attachments/assets/8cbe828c-3184-4421-93e6-f6c292309c1c)
 
 
@@ -48,7 +51,6 @@ Nous avons créé le fichier docker-compose.yml qui définit les services API et
 ![image](https://github.com/user-attachments/assets/216c54b1-c9fb-4cdf-91bc-53aeb06be968)
 
 Affichage du code docker-compose.yml montrant la configuration du service api.
-_ Lancer Docker Compose
 
 ✅ Objectif :
 
@@ -69,12 +71,14 @@ _ Tester l’application
 ✅ Objectif :
 
 Nous avons accédé au site web via http://localhost:8080 et cliqué sur "List Student" pour vérifier que l’API fonctionne.
+
 ![Capture d'écran 2025-03-21 122255](https://github.com/user-attachments/assets/77860423-9e82-40d0-a54e-e962394b0cc3)
 ![Capture d'écran 2025-03-21 122304](https://github.com/user-attachments/assets/4116a872-aa27-466a-bb2a-4c6dde2b937e)
 
 Affichage du site web avec la liste des étudiants.
 
 📌Étape III : Déploiement du Docker Registry 
+
 Dans cette étape, nous allons créer un registre privé Docker pour stocker les images localement et les gérer via une interface web. 🚀
 
 _ Lancer le registre privé Docker
@@ -96,11 +100,13 @@ _ Vérifier le registre privé
 Nous avons vérifié si le registre privé fonctionne bien avec :
 _ Tagger l’image et l’envoyer au registre privé
 docker push localhost:5001/student_api
+
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/21af6588-82f5-4a96-970e-68e987fa0506)
 
 _ Déployer une interface Web pour voir le registre
 
 ✅ Objectif :
+
 Nous avons lancé une interface web pour gérer les images Docker avec :
 
 ![Capture d'écran 2025-03-21 125255](https://github.com/user-attachments/assets/4369e600-db46-41cf-9096-367b552f4a74)
