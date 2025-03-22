@@ -81,16 +81,9 @@ docker run -d -p 5001:5000 --name registry registry:2
 _ Vérifier le registre privé
 🎯 Objectif :
 Nous avons vérifié si le registre privé fonctionne bien avec :
-curl http://localhost:5001/v2/_catalog
-📸 Capture d’écran à ajouter :
-
-Résultat de curl montrant que le registre est actif (il affichera { "repositories": [] } si vide).
 _ Tagger l’image et l’envoyer au registre privé
 docker push localhost:5001/student_api
-
 ![Capture d'écran 2025-03-21 125124](https://github.com/user-attachments/assets/21af6588-82f5-4a96-970e-68e987fa0506)
-
-docker push localhost:5001/student_api
 
 _ Déployer une interface Web pour voir le registre
 🎯 Objectif :
