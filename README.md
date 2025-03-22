@@ -1,20 +1,24 @@
 📦 Mini-Projet Docker : Conteneurisation d'une Application Flask + PHP
 
-📌 Étape | : Construire (build) et tester l'API 
+📌 Étape I : Construire (build) et tester l'API 
 Dans cette partie, nous allons construire et tester l’API Flask en suivant plusieurs étapes.
  _ Choix de l’image de base
+ 
 🎯 Objectif :
 Nous avons utilisé l’image python:3.8-buster comme base pour notre conteneur.
  _ Ajout des informations du mainteneur
+ 
 🎯 Objectif :
 Nous avons ajouté notre nom et email dans le Dockerfile avec LABEL maintainer.
 
 ![image](https://github.com/user-attachments/assets/4ba07cee-5e44-4af9-9e11-721ebe9cb969)
 
 _ Exposition du port 5000
+
 🎯 Objectif :
 Nous avons configuré le conteneur pour exposer le port 5000 afin d’accéder à l’API Flask.
 _ Construction et lancement de l’image Docker 
+
 🎯 Objectif :
 Nous avons construit l’image avec la commande :
 docker build -t student_api .
@@ -25,8 +29,6 @@ docker run -d -p 5000:5000 -v $(pwd)/student_age.json:/data/student_age.json --n
 ![Capture d'écran 2025-03-21 113448](https://github.com/user-attachments/assets/b0824b76-d22b-425e-8704-30673f9f67a6)
 ![Capture d'écran 2025-03-21 113833](https://github.com/user-attachments/assets/c92c3a03-5922-4da6-8575-c6253cb06e0f)
 
-
-_ Test final avec curl
 
 🎯 Objectif :
 Nous avons testé l’API en appelant :
@@ -40,6 +42,7 @@ Dans cette étape, nous allons automatiser le déploiement de l’API et du site
 ✅ 1. Création du fichier docker-compose.yml
 
 🎯 Objectif :
+
 Nous avons créé le fichier docker-compose.yml qui définit les services API et Website.
 
 ![image](https://github.com/user-attachments/assets/216c54b1-c9fb-4cdf-91bc-53aeb06be968)
@@ -48,6 +51,7 @@ Affichage du code docker-compose.yml montrant la configuration du service api.
 ✅ 5. Lancer Docker Compose
 
 🎯 Objectif :
+
 Nous avons lancé l’application en une seule commande :
 docker-compose up --build -d
 
@@ -63,6 +67,7 @@ docker-compose up --build -d
 ✅ 6. Tester l’application
 
 🎯 Objectif :
+
 Nous avons accédé au site web via http://localhost:8080 et cliqué sur "List Student" pour vérifier que l’API fonctionne.
 ![Capture d'écran 2025-03-21 122255](https://github.com/user-attachments/assets/77860423-9e82-40d0-a54e-e962394b0cc3)
 ![Capture d'écran 2025-03-21 122304](https://github.com/user-attachments/assets/4116a872-aa27-466a-bb2a-4c6dde2b937e)
@@ -75,6 +80,7 @@ Dans cette étape, nous allons créer un registre privé Docker pour stocker les
 _ Lancer le registre privé Docker
 
 🎯 Objectif :
+
 Nous avons démarré un registre privé local pour stocker nos images Docker.
 docker run -d -p 5001:5000 --name registry registry:2
 
@@ -86,6 +92,7 @@ docker run -d -p 5001:5000 --name registry registry:2
 _ Vérifier le registre privé 
 
 🎯 Objectif :
+
 Nous avons vérifié si le registre privé fonctionne bien avec :
 _ Tagger l’image et l’envoyer au registre privé
 docker push localhost:5001/student_api
