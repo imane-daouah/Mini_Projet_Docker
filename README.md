@@ -1,15 +1,19 @@
 📦 Mini-Projet Docker : Conteneurisation d'une Application Flask + PHP
 
-📌 Étape I : Construire (build) et tester l'API 
-Dans cette partie, nous allons construire et tester l’API Flask en suivant plusieurs étapes. 
+📌 Étape I : Construire et tester l'API 
+
+Dans cette partie, nous allons construire et tester l’API Flask en suivant plusieurs étapes.
+
 ✅ Objectif :
+
 Nous avons utilisé l’image python:3.8-buster comme base pour notre conteneur.
- Ajout des informations du mainteneur
- Nous avons ajouté notre nom et email dans le Dockerfile avec LABEL maintainer.
+Ajout des informations du mainteneur
+Nous avons ajouté notre nom et email dans le Dockerfile avec LABEL maintainer.
 
 ![image](https://github.com/user-attachments/assets/4ba07cee-5e44-4af9-9e11-721ebe9cb969)
 
 ✅ Objectif :
+
 Nous avons configuré le conteneur pour exposer le port 5000 afin d’accéder à l’API Flask.
 Construction et lancement de l’image Docker 
 Nous avons construit l’image avec la commande :
