@@ -12,7 +12,7 @@ services:
 
   api:
     build:
-      context: ./simple_api  # Remplace par le dossier de ton API
+      context: ./simple_api  
       dockerfile: Dockerfile
     image: localhost:5000/student_api
     container_name: student_api
