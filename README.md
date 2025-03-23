@@ -36,7 +36,7 @@ curl -u root:root -X GET http://localhost:5000/supmit/api/v1.0/get_student_ages
 ![Capture d'écran 2025-03-21 114613](https://github.com/user-attachments/assets/8cbe828c-3184-4421-93e6-f6c292309c1c)
 
 
-📌 Étape II : Infrastructure as Code (5 points)
+📌 Étape II : Infrastructure as Code 
 Dans cette étape, nous allons automatiser le déploiement de l’API et du site web PHP en utilisant Docker Compose. 🚀
 Création du fichier docker-compose.yml
 
@@ -49,6 +49,7 @@ Nous avons créé le fichier docker-compose.yml qui définit les services API et
 ✅ Objectif :
 Nous avons lancé l’application en une seule commande :
 docker-compose up --build -d
+
 ![Capture d'écran 2025-03-21 120816](https://github.com/user-attachments/assets/c7fc58ca-4485-418a-b3c1-71f7d48ea0e2)
 
 ![Capture d'écran 2025-03-21 120835](https://github.com/user-attachments/assets/9b75725f-2437-49cf-9518-95d124344e8c)
@@ -64,6 +65,7 @@ docker-compose up --build -d
 Tester l’application
 
 ✅ Objectif :
+
 Nous avons accédé au site web via http://localhost:8080 et cliqué sur "List Student" pour vérifier que l’API fonctionne.
 
 ![Capture d'écran 2025-03-21 122255](https://github.com/user-attachments/assets/77860423-9e82-40d0-a54e-e962394b0cc3)
