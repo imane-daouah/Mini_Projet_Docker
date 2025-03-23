@@ -37,7 +37,8 @@ curl -u root:root -X GET http://localhost:5000/supmit/api/v1.0/get_student_ages
 
 
 📌 Étape II : Infrastructure as Code 
-Dans cette étape, nous allons automatiser le déploiement de l’API et du site web PHP en utilisant Docker Compose. 🚀
+
+Dans cette étape, nous allons automatiser le déploiement de l’API et du site web PHP en utilisant Docker Compose. 
 Création du fichier docker-compose.yml
 
 ✅ Objectif :
