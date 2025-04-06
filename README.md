@@ -110,5 +110,22 @@ Nous avons lancé une interface web pour gérer les images Docker avec :
 ![{7D96C7A1-9DC1-4915-B90A-0C2FF5489A54}](https://github.com/user-attachments/assets/f6a4cad5-ab8a-453f-b6de-5c45de48131b)
 Réalisé par: Imane DAOUAH , Ismail DAMOUAH , Imane BOUHABBA.
 
+**Déploiement Automatisé d'une Application Web avec CI/CD sur Jenkins et AWS** 
 
+1.  **Création d'une nouvelle instance EC2 :** 
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+Une instance EC2 nommée **Jenkins-Server** a été créée avec l'AMI **Amazon Linux 2023** et le type **t3.micro**, adapté aux tests et développements.  
+Une **paire de clés JenkinsDocker** a été générée pour sécuriser l'accès SSH.  
+Cette instance servira d’environnement pour l’installation de **Jenkins et Docker** dans le cadre du pipeline CI/CD.
+
+2. **Connexion à l'Instance EC2 via SSH et Configuration des Permissions de la Clé Privée**
+
+![alt text](image-3.png)
+
+Configurer les permissions de la clé privée avec la commande chmod 400 pour garantir une sécurité maximale.
+Se connecter à l'instance EC2 en utilisant la commande ssh -i avec la clé privée et l'adresse IP publique de l'instance.
+Une fois connecté, tu pourras installer Jenkins et Docker sur l'instance pour la configuration du pipeline CI/CD.
 
