@@ -123,9 +123,74 @@ Cette instance servira d’environnement pour l’installation de **Jenkins et D
 
 2. **Connexion à l'Instance EC2 via SSH et Configuration des Permissions de la Clé Privée**
 
-![alt text](image-3.png)
+```powershell
+C:\Users\imane\OneDrive\Desktop>ssh -i "C:/Users/imane/OneDrive/Desktop/JenkinsDocker.pem" ec2-user@51.20.193.248
 
-Configurer les permissions de la clé privée avec la commande chmod 400 pour garantir une sécurité maximale.
-Se connecter à l'instance EC2 en utilisant la commande ssh -i avec la clé privée et l'adresse IP publique de l'instance.
-Une fois connecté, tu pourras installer Jenkins et Docker sur l'instance pour la configuration du pipeline CI/CD.
+A newer release of "Amazon Linux" is available.
+  Version 2023.7.20250331:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###| 
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '-> 
+    ~~~         / 
+      ~~._.   _/ 
+         _/ _/
+       _/m/'
+Last login: Sat Apr  5 19:40:32 2025 from 196.70.194.42
 
+```
+
+La connexion à l'instance EC2 a été établie avec succès en utilisant la commande SSH suivante :
+ssh -i "C:/Users/imane/OneDrive/Desktop/JenkinsDocker.pem" ec2-user@51.20.193.248
+Un message d'information a été affiché, indiquant qu'une nouvelle version d'Amazon Linux est disponible, mais cela n'a pas affecté l'accès à l'instance.
+
+3. **Installer Maven :**
+```powershell
+
+
+[ec2-user@ip-51-20-193-248 ~]$ sudo su
+[root@ip-51-20-193-248 ec2-user]# sudo yum install maven
+Amazon Linux 2023 Kernel Livepatch repository                                                                 149 kB/s |  15 kB     00:00
+Dependencies resolved.
+
+==============================================================================================================================================
+ Package                                             Architecture       Version                                 Repository               Size
+==============================================================================================================================================
+Installing:
+ maven                                               noarch             1:3.8.4-3.amzn2023.0.5                  amazonlinux              18 k
+Installing dependencies:
+ alsa-lib                                            x86_64             1.2.7.2-1.amzn2023.0.2                  amazonlinux             504 k
+ apache-commons-cli                                  noarch             1.5.0-3.amzn2023.0.3                    amazonlinux              76 k
+ apache-commons-codec                                noarch             1.15-6.amzn2023.0.3                     amazonlinux             303 k
+ apache-commons-io                                   noarch             1:2.8.0-7.amzn2023.0.4                  amazonlinux             284 k
+ apache-commons-lang3                                noarch             3.12.0-7.amzn2023.0.3                   amazonlinux             559 k
+ atinject                                            noarch             1.0.5-3.amzn2023.0.3                    amazonlinux              23 k
+ cairo                                               x86_64             1.18.0-4.amzn2023.0.1                   amazonlinux             718 k
+ cdi-api                                             noarch             2.0.2-6.amzn2023.0.3                    amazonlinux              54 k
+ dejavu-sans-fonts                                   noarch             2.37-16.amzn2023.0.2                    amazonlinux             1.3 M
+ dejavu-sans-mono-fonts                              noarch             2.37-16.amzn2023.0.2                    amazonlinux             467 k
+ dejavu-serif-fonts                                  noarch             2.37-16.amzn2023.0.2                    amazonlinux             1.0 M
+ fontconfig                                          x86_64             2.13.94-2.amzn2023.0.2                  amazonlinux             273 k
+ fonts-filesystem                                    noarch             1:2.0.5-12.amzn2023.0.2                 amazonlinux             9.5 k
+ freetype                                            x86_64             2.13.2-5.amzn2023.0.1                   amazonlinux             423 k
+ google-guice                                        noarch             4.2.3-8.amzn2023.0.6                    amazonlinux             473 k
+ google-noto-fonts-common                            noarch             20201206-2.amzn2023.0.2                 amazonlinux              15 k
+ google-noto-sans-vf-fonts                           noarch             20201206-2.amzn2023.0.2                 amazonlinux             492 k
+ graphite2                                           x86_64             1.3.14-7.amzn2023.0.2                   amazonlinux              97 k
+ guava                                               noarch             31.0.1-3.amzn2023.0.6                   amazonlinux             2.4 M
+ harfbuzz                                            x86_64             7.0.0-2.amzn2023.0.2                    amazonlinux             
+[root@ip-51-20-193-248 ec2-user]# mvn -version
+Apache Maven 3.8.4 (Red Hat 3.8.4-3.amzn2023.0.5)
+Maven home: /usr/share/maven
+Java version: 17.0.14, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-17-amazon-corretto.x86_64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.1.131-143.221.amzn2023.x86_64", arch: "amd64", family: "unix"
+[root@ip-51-20-193-248 ec2-user]# java -version
+openjdk version "17.0.14" 2025-01-21 LTS
+OpenJDK Runtime Environment Corretto-17.0.14.7.1 (build 17.0.14+7-LTS)
+OpenJDK 64-Bit Server VM Corretto-17.0.14.7.1 (build 17.0.14+7-LTS, mixed mode, sharing)
+
+```
