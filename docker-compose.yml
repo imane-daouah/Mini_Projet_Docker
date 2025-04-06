@@ -3,18 +3,18 @@ version: '3.7'
 services:
   backend:
     build:
-      context: ./simple_api  # Dossier contenant le Dockerfile Flask
+      context: ./simple_api  
     ports:
       - "5000:5000"
     volumes:
-      - ./data:/data  # Montage du répertoire des données
+      - ./data:/data  
     environment:
       - student_age_file_path=/data/student_age.json
 
   frontend:
     build:
-      context: ./website # Dossier contenant le Dockerfile PHP
+      context: ./website 
     ports:
       - "80:80"
     depends_on:
-      - backend  # Attendre que le backend soit lancé
+      - backend  
