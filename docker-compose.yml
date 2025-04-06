@@ -1,26 +1,20 @@
-version: '3.8'
+version: '3.7'
 
 services:
-  api:
-    build: ./simple_api
-    image: student_api
-    container_name: api
+  backend:
+    build:
+      context: ./simple_api  # Dossier contenant le Dockerfile Flask
     ports:
       - "5000:5000"
     volumes:
-      - ./simple_api/student_age.json:/data/student_age.json
-    restart: always
-
-  website:
-    image: php:apache
-    container_name: php_website
-    ports:
-      - "8080:80"
-    volumes:
-      - ./website:/var/www/html
+      - ./data:/data  # Montage du répertoire des données
     environment:
-      USERNAME: "root"
-      PASSWORD: "root"
+      - student_age_file_path=/data/student_age.json
+
+  frontend:
+    build:
+      context: ./website # Dossier contenant le Dockerfile PHP
+    ports:
+      - "80:80"
     depends_on:
-      - api
-    restart: always
+      - backend  # Attendre que le backend soit lancé

@@ -149,10 +149,8 @@ Un message d'information a été affiché, indiquant qu'une nouvelle version d'A
 
 3. **Installer Maven :**
 ```powershell
-
-
-[ec2-user@ip-51-20-193-248 ~]$ sudo su
-[root@ip-51-20-193-248 ec2-user]# sudo yum install maven
+[ec2-user@ip-172-31-47-15 ~]$ sudo su
+[root@ip-172-31-47-15 ec2-user]# sudo yum install maven
 Amazon Linux 2023 Kernel Livepatch repository                                                                 149 kB/s |  15 kB     00:00
 Dependencies resolved.
 
@@ -182,15 +180,112 @@ Installing dependencies:
  graphite2                                           x86_64             1.3.14-7.amzn2023.0.2                   amazonlinux              97 k
  guava                                               noarch             31.0.1-3.amzn2023.0.6                   amazonlinux             2.4 M
  harfbuzz                                            x86_64             7.0.0-2.amzn2023.0.2                    amazonlinux             
-[root@ip-51-20-193-248 ec2-user]# mvn -version
+[root@ip-172-31-47-15 ec2-user]# mvn -version
 Apache Maven 3.8.4 (Red Hat 3.8.4-3.amzn2023.0.5)
 Maven home: /usr/share/maven
 Java version: 17.0.14, vendor: Amazon.com Inc., runtime: /usr/lib/jvm/java-17-amazon-corretto.x86_64
 Default locale: en, platform encoding: UTF-8
 OS name: "linux", version: "6.1.131-143.221.amzn2023.x86_64", arch: "amd64", family: "unix"
-[root@ip-51-20-193-248 ec2-user]# java -version
+[root@ip-172-31-47-15 ec2-user]
 openjdk version "17.0.14" 2025-01-21 LTS
 OpenJDK Runtime Environment Corretto-17.0.14.7.1 (build 17.0.14+7-LTS)
 OpenJDK 64-Bit Server VM Corretto-17.0.14.7.1 (build 17.0.14+7-LTS, mixed mode, sharing)
 
+
 ```
+
+Maven a été installé sur l'instance EC2 en utilisant la commande sudo yum install maven pour gérer les dépendances et compiler les projets Java.
+4. **Instalation Git :**
+
+```powershell
+[root@ip-172-31-47-15 ec2-user]
+Last metadata expiration check: 0:06:05 ago on Sun Apr  6 01:54:31 2025.
+Dependencies resolved.
+==============================================================================================================================================
+ Package                            Architecture             Version                                      Repository                     Size
+==============================================================================================================================================
+Installing:
+ git                                x86_64                   2.47.1-1.amzn2023.0.2                        amazonlinux                    54 k
+Installing dependencies:
+ git-core                           x86_64                   2.47.1-1.amzn2023.0.2                        amazonlinux                   4.7 M
+ git-core-doc                       noarch                   2.47.1-1.amzn2023.0.2                        amazonlinux                   2.8 M
+ perl-Error                         noarch                   1:0.17029-5.amzn2023.0.2                     amazonlinux                    41 k
+ perl-File-Find                     noarch                   1.37-477.amzn2023.0.6                        amazonlinux                    26 k
+ perl-Git                           noarch                   2.47.1-1.amzn2023.0.2                        amazonlinux                    42 k
+ perl-TermReadKey                   x86_64                   2.38-9.amzn2023.0.2                          amazonlinux                    36 k
+ perl-lib                           x86_64                   0.65-477.amzn2023.0.6                        amazonlinux                    15 k
+[root@ip-172-31-47-15 ec2-user]# git --version
+git version 2.47.1
+[root@ip-172-31-47-15 ec2-user]# git config --global user.name "Imane"
+[root@ip-172-31-47-15 ec2-user]# git config --global user.email "imane.daouah@gmail.com"
+```
+Git a été installé sur l'instance EC2 avec la version 2.47.1. La configuration utilisateur a été définie avec le nom "Imane" et l'adresse e-mail "imane.daouah@gmail.com" pour le contrôle de version
+
+5. **Installation jenkins :**
+```powershell
+[root@ip-172-31-47-15 ec2-user]# sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo 
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+--2025-04-06 02:06:48--  https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Resolving pkg.jenkins.io (pkg.jenkins.io)... 151.101.86.133, 2a04:4e42:14::645
+Connecting to pkg.jenkins.io (pkg.jenkins.io)|151.101.86.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 85
+Saving to: ‘/etc/yum.repos.d/jenkins.repo’
+
+/etc/yum.repos.d/jenkins.repo       100%[=================================================================>]      85  --.-KB/s    in 0s
+
+2025-04-06 02:06:48 (744 KB/s) - ‘/etc/yum.repos.d/jenkins.repo’ saved [85/85]
+
+RPM version 4.16.1.3
+Copyright (C) 1998-2002 - Red Hat, Inc.
+This program may be freely redistributed under the terms of the GNU GPL
+[root@ip-172-31-47-15 ec2-user]# sudo yum -y install jenkins
+Jenkins-stable                                                                                                453 kB/s |  30 kB     00:00
+Dependencies resolved.
+==============================================================================================================================================
+ Package                          Architecture                    Version                              Repository                        Size
+==============================================================================================================================================
+Installing:
+ jenkins                          noarch                          2.492.3-1.1                          jenkins                           92 M
+[root@ip-172-31-47-15 ec2-user]# sudo systemctl start jenkins
+[root@ip-172-31-47-15 ec2-user]# sudo systemctl enable --now jenkins
+
+```
+
+6.**Installation Docker :**
+```powershell
+[root@ip-172-31-47-15 ec2-user]# sudo yum update -y
+Last metadata expiration check: 0:11:16 ago on Sun Apr  6 02:07:02 2025.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@ip-172-31-47-15 ec2-user]# sudo yum install docker -y
+Last metadata expiration check: 0:12:37 ago on Sun Apr  6 02:07:02 2025.
+Dependencies resolved.
+==============================================================================================================================================
+ Package                                 Architecture            Version                                   Repository                    Size
+==============================================================================================================================================
+Installing:
+ docker                                  x86_64                  25.0.8-1.amzn2023.0.1                     amazonlinux                   44 M
+Installing dependencies:
+ containerd                              x86_64                  1.7.27-1.amzn2023.0.1                     amazonlinux                   37 M
+ iptables-libs                           x86_64                  1.8.8-3.amzn2023.0.2                      amazonlinux                  401 k
+ iptables-nft                            x86_64                  1.8.8-3.amzn2023.0.2                      amazonlinux                  183 k
+ libcgroup                               x86_64                  3.0-1.amzn2023.0.1                        amazonlinux                   75 k
+ libnetfilter_conntrack                  x86_64                  1.0.8-2.amzn2023.0.2                      amazonlinux                   58 k
+ libnfnetlink                            x86_64                  1.0.1-19.amzn2023.0.2                     amazonlinux                   30 k
+ libnftnl                                x86_64                  1.2.2-2.amzn2023.0.2                      amazonlinux                   84 k
+ pigz                                    x86_64                  2.5-1.amzn2023.0.3                        amazonlinux                   83 k
+ runc                                    x86_64                  1.2.4-1.amzn2023.0.1                      amazonlinux                  3.4 M
+[root@ip-172-31-47-15 ec2-user]# sudo systemctl start docker
+[root@ip-172-31-47-15 ec2-user]# sudo systemctl enable --now docker
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+[root@ip-172-31-47-15 ec2-user]# sudo useradd jenkins
+[root@ip-172-31-47-15 ec2-user]# sudo usermod -aG docker jenkins
+[root@ip-172-31-47-15 ec2-user]# docker -v
+Docker version 25.0.8, build 0bab007
+
+```
+
+7. **  projet Jenkins :**
+![alt text](image-4.png)
