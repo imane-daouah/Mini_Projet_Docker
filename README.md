@@ -286,6 +286,3 @@ Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /
 Docker version 25.0.8, build 0bab007
 
 ```
-
-7. **  projet Jenkins :**
-![alt text](image-4.png)
